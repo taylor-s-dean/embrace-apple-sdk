@@ -192,10 +192,10 @@ final class DefaultURLSessionTaskHandler: URLSessionTaskHandler {
 
     func addTracingHeader(task: URLSessionTask, span: Span) -> String? {
 
-        guard dataSource?.injectTracingHeader == true,
-              task.originalRequest != nil else {
-            return nil
-        }
+//        guard dataSource?.injectTracingHeader == true,
+//              task.originalRequest != nil else {
+//            return nil
+//        }
 
         // ignore if header is already present
         let previousValue = task.originalRequest?.value(forHTTPHeaderField: W3C.traceparentHeaderName)
