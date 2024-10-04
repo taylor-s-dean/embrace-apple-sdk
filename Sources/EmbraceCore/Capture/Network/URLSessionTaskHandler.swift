@@ -204,8 +204,8 @@ final class DefaultURLSessionTaskHandler: URLSessionTaskHandler {
         }
 
         let value = W3C.traceparent(from: span.context)
-        task.injectHeader(withKey: "X-B3-TraceId", value: span.context.traceId)
-        task.injectHeader(withKey: "X-B3-SpanId", value: span.context.spanId)
+        task.injectHeader(withKey: "X-B3-TraceId", value: span.context.traceId.hexString)
+        task.injectHeader(withKey: "X-B3-SpanId", value: span.context.spanId.hexString)
         task.injectHeader(withKey: "X-B3-Sampled", value: "1")
         if task.injectHeader(withKey: W3C.traceparentHeaderName, value: value) {
             return value
