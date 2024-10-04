@@ -68,13 +68,14 @@ public final class URLSessionCaptureService: CaptureService, URLSessionTaskHandl
     }
 
     var injectTracingHeader: Bool {
+        return true
         // check remote config
-        guard Embrace.client?.config?.isNetworkSpansForwardingEnabled == true else {
-            return false
-        }
+//        guard Embrace.client?.config?.isNetworkSpansForwardingEnabled == true else {
+  //          return false
+    //    }
 
         // check local config
-        return options.injectTracingHeader
+      //  return options.injectTracingHeader
     }
 
     var requestsDataSource: URLSessionRequestsDataSource? {
