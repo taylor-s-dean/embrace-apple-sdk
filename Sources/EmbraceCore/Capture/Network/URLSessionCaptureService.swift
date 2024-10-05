@@ -74,8 +74,7 @@ public final class URLSessionCaptureService: CaptureService, URLSessionTaskHandl
 //        }
 
         // check local config
-//        return options.injectTracingHeader
-        return true
+        return options.injectTracingHeader
     }
 
     var requestsDataSource: URLSessionRequestsDataSource? {

@@ -64,8 +64,7 @@ public class EmbraceConfig {
     }
 
     public var isNetworkSpansForwardingEnabled: Bool {
-//        return isEnabled(threshold: payload.networkSpansForwardingThreshold)
-        return true
+        return isEnabled(threshold: payload.networkSpansForwardingThreshold)
     }
 
     public var internalLogsTraceLimit: Int {
